@@ -42,7 +42,7 @@
             this.mainContentHolder1.Location = new System.Drawing.Point(135, 34);
             this.mainContentHolder1.Margin = new System.Windows.Forms.Padding(0);
             this.mainContentHolder1.Name = "mainContentHolder1";
-            this.mainContentHolder1.Size = new System.Drawing.Size(549, 340);
+            this.mainContentHolder1.Size = new System.Drawing.Size(557, 348);
             this.mainContentHolder1.SwitchDirection = EricYou.DirectUI.Forms.WindowSwitchDirection.Positive;
             this.mainContentHolder1.SwitchMilliseconds = 150;
             this.mainContentHolder1.SwitchMode = EricYou.DirectUI.Forms.WindowSwitchMode.Vertical;
@@ -52,7 +52,7 @@
             // 
             this.button1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Location = new System.Drawing.Point(77, 339);
+            this.button1.Location = new System.Drawing.Point(77, 347);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(46, 23);
             this.button1.TabIndex = 1;
@@ -64,7 +64,7 @@
             // 
             this.button2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.Location = new System.Drawing.Point(25, 339);
+            this.button2.Location = new System.Drawing.Point(25, 347);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(46, 23);
             this.button2.TabIndex = 2;
@@ -76,11 +76,11 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(683, 374);
+            this.ClientSize = new System.Drawing.Size(691, 382);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.mainContentHolder1);
-            this.FormSize = new System.Drawing.Size(683, 374);
+            this.FormSize = new System.Drawing.Size(691, 382);
             this.LayoutName = "verticalTabHolder.layout";
             this.Name = "VerticalTabHolderForm";
             this.ShowIcon = false;

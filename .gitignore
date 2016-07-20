@@ -1,1 +1,6 @@
 *.suo
+/EricYou.DirectUI/obj/Debug
+/EricYou.DirectUI.TestUI/bin/Debug
+/EricYou.DirectUI.TestUI/obj/Debug
+/EricYou.DirectUI.UIDemo/bin/Debug
+/EricYou.DirectUI.UIDemo/obj
