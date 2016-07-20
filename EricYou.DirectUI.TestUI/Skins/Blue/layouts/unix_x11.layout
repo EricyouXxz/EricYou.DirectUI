@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!--transparentKey:窗口贴图资源透明色；CaptionHeight：窗口从上边框开始，可以点击移动窗口的区域高度-->
+<layout transparentKey="255,0,255" captionHeight="24">
+  <background-normal sourceName="background-x11"
+                     topLeftPoint="70,30"
+                       topRightPoint="-10,30"
+                       bottomLeftPoint="70,-10"
+                       bottomRightPoint="-10,-10"/>
+  <background-maximized sourceName="background-x11"
+                       topLeftPoint="70,30"
+                       topRightPoint="-10,30"
+                       bottomLeftPoint="70,-10"
+                       bottomRightPoint="-10,-10"/>
+  <images>
+    <image sourceName=""/>
+    <!-- 考虑配置位置-->
+  </images>
+  <buttons>
+    <!--group为空的按钮为默认组-->
+    <!--btRestore,btMax,btMin,btClose为系统预定义按钮，这四个按钮的配置节在布局文件中建议都加上-->
+    <!--enable为false的按钮将不会被加载
+        position为按钮贴图左上角坐标，x取负数表示距离窗口右边框的距离，y取负数表示距离窗口下边框的距离-->
+    <button name="btRestore" group="" enable="true" position="-67,1" normalSourceName="RestoreButton_Normal" hoverSourceName="RestoreButton_Hover" downSourceName="RestoreButton_Down"/>
+    <button name="btMax" group="" enable="true" position="-67,1" normalSourceName="MaxButton_Normal" hoverSourceName="MaxButton_Hover" downSourceName="MaxButton_Down"/>
+    <button name="btMin" group="" enable="true" position="-98,1" normalSourceName="MinButton_Normal" hoverSourceName="MinButton_Hover" downSourceName="MinButton_Down"/>
+    <button name="btClose" group="" enable="true" position="-36,1" normalSourceName="CloseButton_Normal" hoverSourceName="CloseButton_Hover" downSourceName="CloseButton_Down"/>
+
+    <!--group不为空，group为分组名-->
+    <button name="btMax2" group="TestGroup" position="-200,70" normalSourceName="MaxButton_Normal" hoverSourceName="MaxButton_Hover" downSourceName="MaxButton_Down"/>
+    <button name="btMin2" group="TestGroup" position="-170,70" normalSourceName="MinButton_Normal" hoverSourceName="MinButton_Hover" downSourceName="MinButton_Down"/>
+    <button name="btClose2" group="TestGroup" position="-140,70" normalSourceName="CloseButton_Normal" hoverSourceName="CloseButton_Hover" downSourceName="CloseButton_Down"/>
+    <!--<button name="btMenu" group="" position="-50,3" normalSourceName="" hoverSourceName="" downSourceName=""/>-->
+  </buttons>
+</layout>

@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!--transparentKey:窗口贴图资源透明色；CaptionHeight：窗口从上边框开始，可以点击移动窗口的区域高度-->
+<layout transparentKey="255,0,255" captionHeight="24">
+  <background-normal sourceName="vertiTabHolderBG"
+                     topLeftPoint="135,1"
+                       topRightPoint="-1,1"
+                       bottomLeftPoint="135,-1"
+                       bottomRightPoint="-1,-1"/>
+  <background-maximized sourceName="vertiTabHolderBG"
+                       topLeftPoint="135,1"
+                       topRightPoint="-1,1"
+                       bottomLeftPoint="135,-1"
+                       bottomRightPoint="-1,-1"/>
+  <images>
+  </images>
+  <buttons>
+    <!--
+      参数解释：
+             name:按钮名称（唯一名）
+           enable:是否可用，false时界面将不渲染该按钮
+            group:分组名，同一分组的按钮可控制按下状态的互斥
+         position:按钮左上角在父控件的位置
+             text:按钮文字
+    textAlignment:文字对齐方式（使用System.Drawing.ContentAlignment枚举值）
+      textOffsetX:按钮文字绘制时起始坐标的横向偏移（文字默认按横向居中方式绘制）
+      textOffsetY:按钮文字绘制时起始坐标的纵向偏移（文字默认按纵向居中方式绘制）
+ normalSourceName:普通状态下按钮贴图资源名
+   normalFontName:普通状态下按钮文字字体样式
+  hoverSourceName:鼠标滑过状态下按钮贴图资源名
+    hoverFontName:鼠标滑过状态下按钮文字字体样式
+   downSourceName:鼠标按下状态下按钮贴图资源名
+     downFontName:鼠标按下状态下按钮文字字体样式
+    -->
+    <button name="btVertical1" enable="true" group="btVertical" position="0,1"
+            text="设置类别1" textAlignment="MiddleLeft" textOffsetX="35" textOffsetY="-1"
+            normalSourceName="VertiTab_Normal" normalFontName="verticalButtonFont_Normal"
+            hoverSourceName="VertiTab_Hover" hoverFontName="verticalButtonFont_Hover"
+            downSourceName="VertiTab_Down" downFontName="verticalButtonFont_Down"/>
+    <button name="btVertical2" enable="true" group="btVertical" position="0,47"
+            text="设置类别1" textAlignment="MiddleLeft" textOffsetX="35" textOffsetY="-1"
+            normalSourceName="VertiTab_Normal" normalFontName="verticalButtonFont_Normal"
+            hoverSourceName="VertiTab_Hover" hoverFontName="verticalButtonFont_Hover"
+            downSourceName="VertiTab_Down" downFontName="verticalButtonFont_Down"/>
+    <button name="btVertical3" enable="true" group="btVertical" position="0,93"
+            text="设置类别1" textAlignment="MiddleLeft" textOffsetX="35" textOffsetY="-1"
+            normalSourceName="VertiTab_Normal" normalFontName="verticalButtonFont_Normal"
+            hoverSourceName="VertiTab_Hover" hoverFontName="verticalButtonFont_Hover"
+            downSourceName="VertiTab_Down" downFontName="verticalButtonFont_Down"/>
+    <button name="btVertical4" enable="true" group="btVertical" position="0,139"
+            text="设置类别1" textAlignment="MiddleLeft" textOffsetX="35" textOffsetY="-1"
+            normalSourceName="VertiTab_Normal" normalFontName="verticalButtonFont_Normal"
+            hoverSourceName="VertiTab_Hover" hoverFontName="verticalButtonFont_Hover"
+            downSourceName="VertiTab_Down" downFontName="verticalButtonFont_Down"/>
+  </buttons>
+</layout>

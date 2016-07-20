@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!--transparentKey:窗口贴图资源透明色；CaptionHeight：窗口从上边框开始，可以点击移动窗口的区域高度-->
+<layout transparentKey="255,0,255" captionHeight="100">
+  <!--窗口标题栏配置节-->
+  <!--
+    iconSourceName:   窗口标题栏图标资源名，资源名为空时不显示图标
+    showIcon:         是否显示图标
+    text:             标题文本
+    titleAreaHeight:  窗口标题区域高度（用于决定窗口图标和标题纵向位置）
+    titleAreaOffset:  窗口标题区域距离左边框距离（用于决定窗口图标和标题横向位置）
+    fontName:         标题文本字体名，该名字是全局字体配置中的字体名
+  -->
+  <title iconSourceName="" showIcon="true" text="测试窗口" titleAreaHeight="30" titleAreaOffset="12"
+         fontName="LayoutTitle_Default" />
+  
+  <background-normal sourceName="background-normal"
+                     topLeftPoint="553,177"
+                       topRightPoint="-310,177"
+                       bottomLeftPoint="553,-57"
+                       bottomRightPoint="-310,-57"/>
+  <background-maximized sourceName="background-max"
+                       topLeftPoint="553,177"
+                       topRightPoint="-310,177"
+                       bottomLeftPoint="553,-57"
+                       bottomRightPoint="-310,-57"/>
+  <images>
+    <image sourceName="image_bottomIcon" enable="true" top="-47" left="-514" right="-482" bottom="-15"/>
+  </images>
+  <buttons>
+    <!--group为空的按钮为默认组-->
+    <!--btRestore,btMax,btMin,btClose为系统预定义按钮，这四个按钮的配置节在布局文件中建议都加上-->
+    <!--enable为false的按钮将不会被加载
+        position为按钮贴图左上角坐标，x取负数表示距离窗口右边框的距离，y取负数表示距离窗口下边框的距离-->
+    <button name="btRestore" group="" enable="true" position="-85,0" normalSourceName="RestoreButton_Normal" hoverSourceName="RestoreButton_Hover" downSourceName="RestoreButton_Down"/>
+    <button name="btMax" group="" enable="true" position="-85,0" normalSourceName="MaxButton_Normal" hoverSourceName="MaxButton_Hover" downSourceName="MaxButton_Down"/>
+    <button name="btMin" group="" enable="true" position="-118,0" normalSourceName="MinButton_Normal" hoverSourceName="MinButton_Hover" downSourceName="MinButton_Down"/>
+    <button name="btClose" group="" enable="true" position="-52,0" normalSourceName="CloseButton_Normal" hoverSourceName="CloseButton_Hover" downSourceName="CloseButton_Down"/>
+    <button name="btSysMenu" group="" enable="true" position="-152,0" normalSourceName="MenuButton_Normal" hoverSourceName="MenuButton_Hover" downSourceName="MenuButton_Down"/>
+    <!--group不为空，group为分组名-->
+    <button name="btMenu1" enable="true" group="Menu" position="12,26" 
+            normalSourceName="Menu1_Normal" 
+            hoverSourceName="Menu1_Hover" 
+            downSourceName="Menu1_Down"/>
+    <button name="btMenu2" enable="true" group="Menu" position="102,26"
+            normalSourceName="Menu2_Normal"
+            hoverSourceName="Menu2_Hover"
+            downSourceName="Menu2_Down"/>
+    <button name="btMenu3" enable="true" group="Menu" position="192,26"
+            normalSourceName="Menu3_Normal"
+            hoverSourceName="Menu3_Hover"
+            downSourceName="Menu3_Down"/>
+    <button name="btMenu4" enable="true" group="Menu" position="282,26"
+            normalSourceName="Menu4_Normal"
+            hoverSourceName="Menu4_Hover"
+            downSourceName="Menu4_Down"/>
+    <button name="btMenu5" enable="true" group="Menu" position="372,26"
+            normalSourceName="Menu5_Normal"
+            hoverSourceName="Menu5_Hover"
+            downSourceName="Menu5_Down"/>
+    <button name="btMenu6" enable="true" group="Menu" position="462,26"
+            normalSourceName="Menu6_Normal"
+            hoverSourceName="Menu6_Hover"
+            downSourceName="Menu6_Down"/>
+    <button name="btMenu7" enable="true" group="Menu" position="552,26"
+            normalSourceName="Menu7_Normal"
+            hoverSourceName="Menu7_Hover"
+            downSourceName="Menu7_Down"/>
+    <button name="btMenu8" enable="true" group="Menu" position="642,26"
+            normalSourceName="Menu8_Normal"
+            hoverSourceName="Menu8_Hover"
+            downSourceName="Menu8_Down"/>
+  </buttons>
+  
+</layout>

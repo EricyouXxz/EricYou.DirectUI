@@ -1,0 +1,185 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{94DB4D3E-A9E1-4618-98A5-6051C799C5F2}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>EricYou.DirectUI.UIDemo</RootNamespace>
+    <AssemblyName>EricYou.DirectUI.UIDemo</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="HorizontalTabHolderForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="HorizontalTabHolderForm.Designer.cs">
+      <DependentUpon>HorizontalTabHolderForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MainForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainForm.Designer.cs">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="NewDataGridView.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="TestContentForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TestContentForm.Designer.cs">
+      <DependentUpon>TestContentForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="VerticalTabHolderForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VerticalTabHolderForm.Designer.cs">
+      <DependentUpon>VerticalTabHolderForm.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="HorizontalTabHolderForm.resx">
+      <DependentUpon>HorizontalTabHolderForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainForm.resx">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="Skins\Default\layouts\horizontalTabHolder.layout" />
+    <EmbeddedResource Include="Skins\Default\layouts\main.layout" />
+    <EmbeddedResource Include="Skins\Default\layouts\main2.layout" />
+    <EmbeddedResource Include="Skins\Default\layouts\verticalTabHolder.layout" />
+    <EmbeddedResource Include="TestContentForm.resx">
+      <DependentUpon>TestContentForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VerticalTabHolderForm.resx">
+      <DependentUpon>VerticalTabHolderForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="App.config">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <None Include="Skins\Default\SkinSettings.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\EricYou.DirectUI\EricYou.DirectUI.csproj">
+      <Project>{1FB8E196-77E0-4447-8FB8-CD9AAB5BA6F3}</Project>
+      <Name>EricYou.DirectUI</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Skins\Default\images\bg\bg_max.png" />
+    <Content Include="Skins\Default\images\bg\bg_normal.png" />
+    <Content Include="Skins\Default\images\bg\HoriTabHolderWindowGB.png" />
+    <Content Include="Skins\Default\images\bg\VertiTabHolderWindowGB.png" />
+    <Content Include="Skins\Default\images\尾部icon.png" />
+    <Content Include="Skins\Default\images\最大缩小按钮\默认状态\icon1.png" />
+    <Content Include="Skins\Default\images\最大缩小按钮\默认状态\icon2.png" />
+    <Content Include="Skins\Default\images\最大缩小按钮\默认状态\icon3.png" />
+    <Content Include="Skins\Default\images\最大缩小按钮\默认状态\icon4.png" />
+    <Content Include="Skins\Default\images\最大缩小按钮\鼠标按下状态\iconDown1.png" />
+    <Content Include="Skins\Default\images\最大缩小按钮\鼠标按下状态\iconDown2.png" />
+    <Content Include="Skins\Default\images\最大缩小按钮\鼠标按下状态\iconDown3.png" />
+    <Content Include="Skins\Default\images\最大缩小按钮\鼠标按下状态\iconDown4.png" />
+    <Content Include="Skins\Default\images\最大缩小按钮\鼠标触摸状态\iconSel1.png" />
+    <Content Include="Skins\Default\images\最大缩小按钮\鼠标触摸状态\iconSel2.png" />
+    <Content Include="Skins\Default\images\最大缩小按钮\鼠标触摸状态\iconSel3.png" />
+    <Content Include="Skins\Default\images\最大缩小按钮\鼠标触摸状态\iconSel4.png" />
+    <Content Include="Skins\Default\images\栏目按钮\menu1-来宾消费-down.png" />
+    <Content Include="Skins\Default\images\栏目按钮\menu1-来宾消费-hover.png" />
+    <Content Include="Skins\Default\images\栏目按钮\menu1-来宾消费-normal.png" />
+    <Content Include="Skins\Default\images\栏目按钮\menu2-电话预定-down.png" />
+    <Content Include="Skins\Default\images\栏目按钮\menu2-电话预定-hover.png" />
+    <Content Include="Skins\Default\images\栏目按钮\menu2-电话预定-normal.png" />
+    <Content Include="Skins\Default\images\栏目按钮\menu3-会员中心-down.png" />
+    <Content Include="Skins\Default\images\栏目按钮\menu3-会员中心-hover.png" />
+    <Content Include="Skins\Default\images\栏目按钮\menu3-会员中心-normal.png" />
+    <Content Include="Skins\Default\images\栏目按钮\menu4-宣传营销-down.png" />
+    <Content Include="Skins\Default\images\栏目按钮\menu4-宣传营销-hover.png" />
+    <Content Include="Skins\Default\images\栏目按钮\menu4-宣传营销-normal.png" />
+    <Content Include="Skins\Default\images\栏目按钮\menu5-免费短信-down.png" />
+    <Content Include="Skins\Default\images\栏目按钮\menu5-免费短信-hover.png" />
+    <Content Include="Skins\Default\images\栏目按钮\menu5-免费短信-normal.png" />
+    <Content Include="Skins\Default\images\栏目按钮\menu6-商品管理-down.png" />
+    <Content Include="Skins\Default\images\栏目按钮\menu6-商品管理-hover.png" />
+    <Content Include="Skins\Default\images\栏目按钮\menu6-商品管理-normal.png" />
+    <Content Include="Skins\Default\images\栏目按钮\menu7-营业报表-down.png" />
+    <Content Include="Skins\Default\images\栏目按钮\menu7-营业报表-hover.png" />
+    <Content Include="Skins\Default\images\栏目按钮\menu7-营业报表-normal.png" />
+    <Content Include="Skins\Default\images\栏目按钮\menu8-系统设置-down.png" />
+    <Content Include="Skins\Default\images\栏目按钮\menu8-系统设置-hover.png" />
+    <Content Include="Skins\Default\images\栏目按钮\menu8-系统设置-normal.png" />
+    <Content Include="Skins\Default\images\横纵导航按钮\横向普通-#436411.png" />
+    <Content Include="Skins\Default\images\横纵导航按钮\横向触摸-#436411.png" />
+    <Content Include="Skins\Default\images\横纵导航按钮\横向选中-#000000加粗.png" />
+    <Content Include="Skins\Default\images\横纵导航按钮\纵向普通-#080808.png" />
+    <Content Include="Skins\Default\images\横纵导航按钮\纵向触摸-#080808.png" />
+    <Content Include="Skins\Default\images\横纵导航按钮\纵向选中-#ffffff.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PostBuildEvent>echo on
+
+if not exist "$(TargetDir)Skins" mkdir "$(TargetDir)Skins"
+
+xcopy /s /y  "$(ProjectDir)Skins\*.*" "$(TargetDir)Skins"</PostBuildEvent>
+  </PropertyGroup>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

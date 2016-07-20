@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name=".DirectUI.Skin.Styles.GenericDUIStyle">
+    <Position X="0.5" Y="1.75" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AAAAIAAAAAAgAAAAAAAQAAQAAGAAAQAAAAAAAgAAAAA=</HashCode>
+      <FileName>Skin\Styles\GenericDUIStyle.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name=".DirectUI.Skin.Styles.TextBoxDUIStyle">
+    <Position X="4.25" Y="1.25" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AEAAAAAAAAGAAABAAAAAAAAAAECAAAAQAAAAAAQBAgA=</HashCode>
+      <FileName>Skin\Styles\TextBoxDUIStyle.cs</FileName>
+      <NewMemberFileName>Skin\Styles\LabelDUIStyle.cs</NewMemberFileName>
+    </TypeIdentifier>
+  </Class>
+  <Interface Name=".DirectUI.Skin.Styles.IDUIStyle">
+    <Position X="0.5" Y="0.5" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Skin\Styles\IDUIStyle.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Font Name="微软雅黑" Size="9" />
+</ClassDiagram>

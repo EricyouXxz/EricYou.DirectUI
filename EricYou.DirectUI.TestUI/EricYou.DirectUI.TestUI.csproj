@@ -1,0 +1,351 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.21022</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{9E7D02FD-3051-4B2D-8D42-651B2F4F89B2}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>EricYou.DirectUI.TestUI</RootNamespace>
+    <AssemblyName>EricYou.DirectUI.TestUI</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <OldToolsVersion>3.5</OldToolsVersion>
+    <UpgradeBackupLocation />
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject>
+    </StartupObject>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form2.Designer.cs">
+      <DependentUpon>Form2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="NotifyTest\NotifyTest.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NotifyTest\NotifyTest.Designer.cs">
+      <DependentUpon>NotifyTest.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="RoundPanelTestForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RoundPanelTestForm.Designer.cs">
+      <DependentUpon>RoundPanelTestForm.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form2.resx">
+      <DependentUpon>Form2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NotifyTest\NotifyTest.resx">
+      <DependentUpon>NotifyTest.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RoundPanelTestForm.resx">
+      <DependentUpon>RoundPanelTestForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Skins\Blue\layouts\Error.layout" />
+    <EmbeddedResource Include="Skins\Blue\layouts\linux_gtk.layout" />
+    <EmbeddedResource Include="Skins\Blue\layouts\main.layout" />
+    <EmbeddedResource Include="Skins\Blue\layouts\ms_windows.layout" />
+    <EmbeddedResource Include="Skins\Blue\layouts\test.layout" />
+    <EmbeddedResource Include="Skins\Blue\layouts\unix_x11.layout" />
+    <EmbeddedResource Include="Skins\Default\layouts\Error.layout" />
+    <EmbeddedResource Include="Skins\Default\layouts\linux_gtk.layout" />
+    <EmbeddedResource Include="Skins\Default\layouts\main.layout" />
+    <EmbeddedResource Include="Skins\Default\layouts\ms_windows.layout" />
+    <EmbeddedResource Include="Skins\Default\layouts\test.layout" />
+    <EmbeddedResource Include="Skins\Default\layouts\unix_x11.layout" />
+    <EmbeddedResource Include="Skins\Linux GTK\layouts\main.layout" />
+    <EmbeddedResource Include="Skins\MS Windows\layouts\main.layout" />
+    <EmbeddedResource Include="Skins\Red\layouts\main.layout" />
+    <EmbeddedResource Include="Skins\Red\layouts\test.layout" />
+    <EmbeddedResource Include="Skins\Unix X11\layouts\main.layout" />
+    <EmbeddedResource Include="Skins\Yellow\layouts\main.layout" />
+    <EmbeddedResource Include="Skins\Yellow\layouts\test.layout" />
+    <None Include="App.config">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <None Include="Skins\Blue\SkinSettings.config" />
+    <None Include="Skins\Default\SkinSettings.config" />
+    <None Include="Skins\Linux GTK\SkinSettings.config" />
+    <None Include="Skins\MS Windows\SkinSettings.config" />
+    <None Include="Skins\Red\SkinSettings.config" />
+    <None Include="Skins\Unix X11\SkinSettings.config" />
+    <None Include="Skins\Yellow\SkinSettings.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.2.0">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 2.0 %28x86%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.0">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.0 %28x86%29</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\EricYou.DirectUI\EricYou.DirectUI.csproj">
+      <Project>{1fb8e196-77e0-4447-8fb8-cd9aab5ba6f3}</Project>
+      <Name>EricYou.DirectUI</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Skins\Blue\images\apple.png" />
+    <Content Include="Skins\Blue\images\background-max.png" />
+    <Content Include="Skins\Blue\images\background-normal.png" />
+    <Content Include="Skins\Blue\images\background-test.png" />
+    <Content Include="Skins\Blue\images\baidu.gif" />
+    <Content Include="Skins\Blue\images\ico.png" />
+    <Content Include="Skins\Blue\images\IMCloseButton_Down.bmp" />
+    <Content Include="Skins\Blue\images\IMCloseButton_Hover.bmp" />
+    <Content Include="Skins\Blue\images\IMCloseButton_Normal.bmp" />
+    <Content Include="Skins\Blue\images\IMMaxButton_Down.bmp" />
+    <Content Include="Skins\Blue\images\IMMaxButton_Hover.bmp" />
+    <Content Include="Skins\Blue\images\IMMaxButton_Normal.bmp" />
+    <Content Include="Skins\Blue\images\IMMinButton_Down.bmp" />
+    <Content Include="Skins\Blue\images\IMMinButton_Hover.bmp" />
+    <Content Include="Skins\Blue\images\IMMinButton_Normal.bmp" />
+    <Content Include="Skins\Blue\images\IMRestoreButton_Down.bmp" />
+    <Content Include="Skins\Blue\images\IMRestoreButton_Hover.bmp" />
+    <Content Include="Skins\Blue\images\IMRestoreButton_Normal.bmp" />
+    <Content Include="Skins\Blue\images\simple_gtk.png" />
+    <Content Include="Skins\Blue\images\simple_msw.png" />
+    <Content Include="Skins\Blue\images\simple_x11.png" />
+    <Content Include="Skins\Blue\images\test-1.png" />
+    <Content Include="Skins\Blue\images\test-2.png" />
+    <Content Include="Skins\Blue\images\纵向普通-#080808.png" />
+    <Content Include="Skins\Blue\images\纵向触摸-#080808.png" />
+    <Content Include="Skins\Blue\images\纵向选中-#ffffff.png" />
+    <Content Include="Skins\Default\images\apple.png" />
+    <Content Include="Skins\Default\images\background-max.png" />
+    <Content Include="Skins\Default\images\background-normal.png" />
+    <Content Include="Skins\Default\images\background-test.png" />
+    <Content Include="Skins\Default\images\baidu.gif" />
+    <Content Include="Skins\Default\images\ico.png" />
+    <Content Include="Skins\Default\images\IMCloseButton_Down.bmp" />
+    <Content Include="Skins\Default\images\IMCloseButton_Hover.bmp" />
+    <Content Include="Skins\Default\images\IMCloseButton_Normal.bmp" />
+    <Content Include="Skins\Default\images\IMMaxButton_Down.bmp" />
+    <Content Include="Skins\Default\images\IMMaxButton_Hover.bmp" />
+    <Content Include="Skins\Default\images\IMMaxButton_Normal.bmp" />
+    <Content Include="Skins\Default\images\IMMinButton_Down.bmp" />
+    <Content Include="Skins\Default\images\IMMinButton_Hover.bmp" />
+    <Content Include="Skins\Default\images\IMMinButton_Normal.bmp" />
+    <Content Include="Skins\Default\images\IMRestoreButton_Down.bmp" />
+    <Content Include="Skins\Default\images\IMRestoreButton_Hover.bmp" />
+    <Content Include="Skins\Default\images\IMRestoreButton_Normal.bmp" />
+    <Content Include="Skins\Default\images\simple_gtk.png" />
+    <Content Include="Skins\Default\images\simple_msw.png" />
+    <Content Include="Skins\Default\images\simple_x11.png" />
+    <Content Include="Skins\Default\images\test-1.png" />
+    <Content Include="Skins\Default\images\test-2.png" />
+    <Content Include="Skins\Default\images\纵向普通-#080808.png" />
+    <Content Include="Skins\Default\images\纵向触摸-#080808.png" />
+    <Content Include="Skins\Default\images\纵向选中-#ffffff.png" />
+    <Content Include="Skins\Linux GTK\images\IMCloseButton_Down.bmp" />
+    <Content Include="Skins\Linux GTK\images\IMCloseButton_Hover.bmp" />
+    <Content Include="Skins\Linux GTK\images\IMCloseButton_Normal.bmp" />
+    <Content Include="Skins\Linux GTK\images\IMMaxButton_Down.bmp" />
+    <Content Include="Skins\Linux GTK\images\IMMaxButton_Hover.bmp" />
+    <Content Include="Skins\Linux GTK\images\IMMaxButton_Normal.bmp" />
+    <Content Include="Skins\Linux GTK\images\IMMinButton_Down.bmp" />
+    <Content Include="Skins\Linux GTK\images\IMMinButton_Hover.bmp" />
+    <Content Include="Skins\Linux GTK\images\IMMinButton_Normal.bmp" />
+    <Content Include="Skins\Linux GTK\images\IMRestoreButton_Down.bmp" />
+    <Content Include="Skins\Linux GTK\images\IMRestoreButton_Hover.bmp" />
+    <Content Include="Skins\Linux GTK\images\IMRestoreButton_Normal.bmp" />
+    <Content Include="Skins\Linux GTK\images\simple_gtk.png" />
+    <Content Include="Skins\Linux GTK\images\纵向普通-#080808.png" />
+    <Content Include="Skins\Linux GTK\images\纵向触摸-#080808.png" />
+    <Content Include="Skins\Linux GTK\images\纵向选中-#ffffff.png" />
+    <Content Include="Skins\MS Windows\images\IMCloseButton_Down.bmp" />
+    <Content Include="Skins\MS Windows\images\IMCloseButton_Hover.bmp" />
+    <Content Include="Skins\MS Windows\images\IMCloseButton_Normal.bmp" />
+    <Content Include="Skins\MS Windows\images\IMMaxButton_Down.bmp" />
+    <Content Include="Skins\MS Windows\images\IMMaxButton_Hover.bmp" />
+    <Content Include="Skins\MS Windows\images\IMMaxButton_Normal.bmp" />
+    <Content Include="Skins\MS Windows\images\IMMinButton_Down.bmp" />
+    <Content Include="Skins\MS Windows\images\IMMinButton_Hover.bmp" />
+    <Content Include="Skins\MS Windows\images\IMMinButton_Normal.bmp" />
+    <Content Include="Skins\MS Windows\images\IMRestoreButton_Down.bmp" />
+    <Content Include="Skins\MS Windows\images\IMRestoreButton_Hover.bmp" />
+    <Content Include="Skins\MS Windows\images\IMRestoreButton_Normal.bmp" />
+    <Content Include="Skins\MS Windows\images\simple_msw.png" />
+    <Content Include="Skins\MS Windows\images\纵向普通-#080808.png" />
+    <Content Include="Skins\MS Windows\images\纵向触摸-#080808.png" />
+    <Content Include="Skins\MS Windows\images\纵向选中-#ffffff.png" />
+    <Content Include="Skins\Red\images\apple.png" />
+    <Content Include="Skins\Red\images\background-max.png" />
+    <Content Include="Skins\Red\images\background-normal.png" />
+    <Content Include="Skins\Red\images\background-test.png" />
+    <Content Include="Skins\Red\images\baidu.gif" />
+    <Content Include="Skins\Red\images\IMCloseButton_Down.bmp" />
+    <Content Include="Skins\Red\images\IMCloseButton_Hover.bmp" />
+    <Content Include="Skins\Red\images\IMCloseButton_Normal.bmp" />
+    <Content Include="Skins\Red\images\IMMaxButton_Down.bmp" />
+    <Content Include="Skins\Red\images\IMMaxButton_Hover.bmp" />
+    <Content Include="Skins\Red\images\IMMaxButton_Normal.bmp" />
+    <Content Include="Skins\Red\images\IMMinButton_Down.bmp" />
+    <Content Include="Skins\Red\images\IMMinButton_Hover.bmp" />
+    <Content Include="Skins\Red\images\IMMinButton_Normal.bmp" />
+    <Content Include="Skins\Red\images\IMRestoreButton_Down.bmp" />
+    <Content Include="Skins\Red\images\IMRestoreButton_Hover.bmp" />
+    <Content Include="Skins\Red\images\IMRestoreButton_Normal.bmp" />
+    <Content Include="Skins\Red\images\test-1.png" />
+    <Content Include="Skins\Red\images\test-2.png" />
+    <Content Include="Skins\Red\images\纵向普通-#080808.png" />
+    <Content Include="Skins\Red\images\纵向触摸-#080808.png" />
+    <Content Include="Skins\Red\images\纵向选中-#ffffff.png" />
+    <Content Include="Skins\Unix X11\images\IMCloseButton_Down.bmp" />
+    <Content Include="Skins\Unix X11\images\IMCloseButton_Hover.bmp" />
+    <Content Include="Skins\Unix X11\images\IMCloseButton_Normal.bmp" />
+    <Content Include="Skins\Unix X11\images\IMMaxButton_Down.bmp" />
+    <Content Include="Skins\Unix X11\images\IMMaxButton_Hover.bmp" />
+    <Content Include="Skins\Unix X11\images\IMMaxButton_Normal.bmp" />
+    <Content Include="Skins\Unix X11\images\IMMinButton_Down.bmp" />
+    <Content Include="Skins\Unix X11\images\IMMinButton_Hover.bmp" />
+    <Content Include="Skins\Unix X11\images\IMMinButton_Normal.bmp" />
+    <Content Include="Skins\Unix X11\images\IMRestoreButton_Down.bmp" />
+    <Content Include="Skins\Unix X11\images\IMRestoreButton_Hover.bmp" />
+    <Content Include="Skins\Unix X11\images\IMRestoreButton_Normal.bmp" />
+    <Content Include="Skins\Unix X11\images\simple_x11.png" />
+    <Content Include="Skins\Unix X11\images\纵向普通-#080808.png" />
+    <Content Include="Skins\Unix X11\images\纵向触摸-#080808.png" />
+    <Content Include="Skins\Unix X11\images\纵向选中-#ffffff.png" />
+    <Content Include="Skins\Yellow\images\apple.png" />
+    <Content Include="Skins\Yellow\images\background-max.png" />
+    <Content Include="Skins\Yellow\images\background-normal.png" />
+    <Content Include="Skins\Yellow\images\background-test.png" />
+    <Content Include="Skins\Yellow\images\baidu.gif" />
+    <Content Include="Skins\Yellow\images\ico.png" />
+    <Content Include="Skins\Yellow\images\IMCloseButton_Down.bmp" />
+    <Content Include="Skins\Yellow\images\IMCloseButton_Hover.bmp" />
+    <Content Include="Skins\Yellow\images\IMCloseButton_Normal.bmp" />
+    <Content Include="Skins\Yellow\images\IMMaxButton_Down.bmp" />
+    <Content Include="Skins\Yellow\images\IMMaxButton_Hover.bmp" />
+    <Content Include="Skins\Yellow\images\IMMaxButton_Normal.bmp" />
+    <Content Include="Skins\Yellow\images\IMMinButton_Down.bmp" />
+    <Content Include="Skins\Yellow\images\IMMinButton_Hover.bmp" />
+    <Content Include="Skins\Yellow\images\IMMinButton_Normal.bmp" />
+    <Content Include="Skins\Yellow\images\IMRestoreButton_Down.bmp" />
+    <Content Include="Skins\Yellow\images\IMRestoreButton_Hover.bmp" />
+    <Content Include="Skins\Yellow\images\IMRestoreButton_Normal.bmp" />
+    <Content Include="Skins\Yellow\images\test-1.png" />
+    <Content Include="Skins\Yellow\images\test-2.png" />
+    <Content Include="Skins\Yellow\images\纵向普通-#080808.png" />
+    <Content Include="Skins\Yellow\images\纵向触摸-#080808.png" />
+    <Content Include="Skins\Yellow\images\纵向选中-#ffffff.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PostBuildEvent>echo on
+
+if not exist "$(TargetDir)Skins" mkdir "$(TargetDir)Skins"
+
+xcopy /s /y  "$(ProjectDir)Skins\*.*" "$(TargetDir)Skins"</PostBuildEvent>
+  </PropertyGroup>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
