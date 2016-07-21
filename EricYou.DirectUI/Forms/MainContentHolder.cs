@@ -87,13 +87,25 @@ namespace EricYou.DirectUI.Forms
             }
         } 
 
+        /// <summary>
+        /// 构造函数
+        /// </summary>
         public MainContentHolder()
         {
             InitializeComponent();
         }
 
+        /// <summary>
+        /// 向窗口容器中添加指定名称的窗口实例
+        /// </summary>
+        /// <param name="name">窗口名称</param>
+        /// <param name="contentForm">窗口实例</param>
         public void AddContentForm(string name, Form contentForm)
         {
+            if(string.IsNullOrEmpty(name))
+            {
+                throw new Exception("向MainContentHolder中添加了未命名的Form实例！");
+            }
             if (contentForm == null)
             {
                 throw new Exception("向MainContentHolder中添加了名为" + name + "空Form实例！");
@@ -108,22 +120,76 @@ namespace EricYou.DirectUI.Forms
             contentForm.Show();                                 //窗口初次绘图
 
             //WindowAnimator.AnimateWindow(contentForm.Handle, 1, WindowAnimator.AW_HIDE | WindowAnimator.AW_SLIDE | WindowAnimator.AW_HOR_POSITIVE);
-            this.pnMain.Controls.Add(contentForm);  //将窗口移动到主显示Panel中
-            //contentForm.Dock = DockStyle.None ;      //设置窗口停靠模式为Fill
+            this.pnMain.Controls.Add(contentForm);              //将窗口移动到主显示Panel中
+            //contentForm.Dock = DockStyle.None ;               //设置窗口停靠模式为Fill
             contentForm.Size = new Size(1, 1);
 
-            if (_contentFormDict.ContainsKey(name))
+            if (_contentFormDict.ContainsKey(name))             //如果新加入的窗口与已有窗口同名，则卸载旧窗口，安装新窗口
             {
-                Form oldForm = _contentFormDict[name];
-                _contentFormDict.Remove(name);
-                if (oldForm != null)
-                {
-                    _contentFormList.Remove(oldForm);
-                }
+                RemoveContentForm(name);
             }
+
             _contentFormDict.Add(name, contentForm);
             _contentFormList.Add(contentForm);
 
+        }
+
+        /// <summary>
+        /// 从窗口容器容器中移除指定名称的窗口实例
+        /// </summary>
+        /// <param name="name">窗口名称</param>
+        public void RemoveContentForm(string name)
+        {
+            if(_contentFormDict.ContainsKey(name)
+                && _contentFormDict[name] != null)
+            {
+                RemoveContentForm(_contentFormDict[name]);
+            }
+
+        }
+
+        /// <summary>
+        /// 从窗口容器容器中移除指定实例的窗口
+        /// </summary>
+        /// <param name="contentForm">窗口实例</param>
+        public void RemoveContentForm(Form contentForm)
+        {
+            if(contentForm!=null)
+            {
+                string formName = null;
+                foreach(string key in _contentFormDict.Keys)
+                {
+                    if(_contentFormDict[key].Equals(contentForm))
+                    {
+                        formName = key;                             //获得指定窗口实例对应的窗口名
+                    }
+                }
+                if(formName!=null)                                  //从窗口字典移除窗口
+                {
+                    _contentFormDict.Remove(formName);
+                }
+
+                _contentFormList.Remove(contentForm);               //从窗口列表移除窗口
+
+                this.pnMain.Controls.Remove(contentForm);           //从主显示panel中移除重复的窗口
+                contentForm.Close();                                //关闭窗口
+            }
+        }
+
+        /// <summary>
+        /// 清除容器中所有窗口实例
+        /// </summary>
+        public void Clear()
+        {
+            List<Form> formList = new List<Form>();
+            foreach(Form form in _contentFormDict.Values)
+            {
+                formList.Add(form);
+            }
+
+            formList.ForEach(f => {
+                RemoveContentForm(f);
+            });
         }
 
         public void OnContainerShown()
