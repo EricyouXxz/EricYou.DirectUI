@@ -168,8 +168,13 @@ namespace EricYou.DirectUI.Forms
                 {
                     _contentFormDict.Remove(formName);
                 }
-
                 _contentFormList.Remove(contentForm);               //从窗口列表移除窗口
+
+                if(_currentShowForm == contentForm)                 //若移除的窗口实例是当前正在显示的窗口实例，则取消当前显示窗口变量的引用
+                {
+                    _currentShowForm = null;
+                    _currentShowFormName = string.Empty;
+                }
 
                 this.pnMain.Controls.Remove(contentForm);           //从主显示panel中移除重复的窗口
                 contentForm.Close();                                //关闭窗口
