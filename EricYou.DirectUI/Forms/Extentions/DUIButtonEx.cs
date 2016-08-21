@@ -284,9 +284,21 @@ namespace EricYou.DirectUI.Forms.Extentions
 
         protected override void OnMouseUp(MouseEventArgs e)
         {
+            //MessageBox.Show(string.Format("x={0} y={1}", e.X, e.Y));
+
             base.OnMouseUp(e);
 
-            this._status = ButtonStatus.Hover;
+            //鼠标抬起事件触发时，若鼠标已不在按钮的工作区范围内，则按钮状态修改为norm状态，否则为hover状态
+            Rectangle buttonRect = new Rectangle(this.Location, this.Size);
+            Rectangle buttonScreenRect = this.Parent.RectangleToScreen(buttonRect);
+            if(buttonScreenRect.Contains(MousePosition))
+            {
+                this._status = ButtonStatus.Hover;
+            }
+            else
+            {
+                this._status = ButtonStatus.Normal;
+            }
             this.Invalidate();
             //this.Update();
         }
